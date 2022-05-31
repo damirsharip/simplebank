@@ -25,9 +25,9 @@ jobs:
           POSTGRES_USER: root
           POSTGRES_PASSWORD: secret
           POSTGRES_DB: simple_bank
-          ports:
-            # Maps tcp port 5432 on service container to the host
-            - 5432:5432
+
+        ports:
+          - 5432:5432
         # Set health checks to wait until postgres has started
         options: >-
           --health-cmd pg_isready
@@ -51,5 +51,6 @@ jobs:
 
       - name: run migrations
         run: make migrateup
+
       - name: Test
         run: make test
