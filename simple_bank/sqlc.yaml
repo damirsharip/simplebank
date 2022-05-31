@@ -1,0 +1,11 @@
+version: "1"
+packages:
+  - name: "db"
+    path: "./db/sqlc"
+    queries: "./db/query/"
+    schema: "./db/migration/"
+    engine: "postgresql"
+    emit_json_tags: true
+    emit_prepared_queries: false # to make simple for tutorial purposes
+    emit_interface: false # similar to above
+    emit_exact_table_names: false # vobwe jaiski narse accounts table = Account or Accounts struct ko
