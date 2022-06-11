@@ -21,7 +21,7 @@ func TestTransferTx(t *testing.T) {
 
 	for i := 0; i < n; i++ {
 		go func() {
-			result, err := store.transferTX(context.Background(), TransferTxParams{
+			result, err := store.TransferTX(context.Background(), TransferTxParams{
 				FromAccountID: account1.ID,
 				ToAccountID:   account2.ID,
 				Amount:        amount,
@@ -128,7 +128,7 @@ func TestTransferTxDeadlock(t *testing.T) {
 			ToAccountID = account1.ID
 		}
 		go func() {
-			_, err := store.transferTX(context.Background(), TransferTxParams{
+			_, err := store.TransferTX(context.Background(), TransferTxParams{
 				FromAccountID: FromAccountID,
 				ToAccountID:   ToAccountID,
 				Amount:        amount,

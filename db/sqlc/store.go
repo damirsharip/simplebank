@@ -52,7 +52,7 @@ type TransferTxResult struct {
 
 // performs tranfer of money from one account to other account
 // it creates transfer record, write entries, and update balances within single transaction
-func (store *Store) transferTX(ctx context.Context, arg TransferTxParams) (TransferTxResult, error) {
+func (store *Store) TransferTX(ctx context.Context, arg TransferTxParams) (TransferTxResult, error) {
 	var result TransferTxResult
 
 	err := store.execTX(ctx, func(q *Queries) error {
