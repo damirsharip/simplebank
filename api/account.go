@@ -3,6 +3,7 @@ package api
 import (
 	"database/sql"
 	"github.com/gin-gonic/gin"
+	"github.com/lib/pq"
 	"net/http"
 	db "tutorial.sqlc.dev/app/db/sqlc"
 )
@@ -28,6 +29,12 @@ func (server *Server) createAccount(ctx *gin.Context) {
 
 	account, err := server.store.CreateAccount(ctx, arg)
 	if err != nil {
+		if pqErr, ok := err.(*pq.Error); ok { // convert the err from postgress to pq.Errortype // of conversion is ok then ...
+			switch pqErr.Code.Name() {
+			case "foreign_key_violation", "unique violation":
+				ctx.JSON(http.StatusForbidden, errorResponse(err))
+			}
+		}
 		ctx.JSON(http.StatusInternalServerError, errorResponse(err))
 		return
 	}

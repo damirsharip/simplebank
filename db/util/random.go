@@ -7,6 +7,7 @@ import (
 )
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz"
+const AllSymbols = "abcdefghijklmnopqrstuvwxyz1234567890"
 
 func init() {
 	rand.Seed(time.Now().UnixNano()) // every time we run the code the generated value will be different
@@ -40,4 +41,18 @@ func RandomCurrency() string {
 	n := len(currencies)
 
 	return currencies[rand.Intn(n)]
+}
+
+func RandomEmail() string {
+	var sb strings.Builder
+	k := len(AllSymbols)
+
+	for i := 0; i < 8; i++ {
+		c := AllSymbols[rand.Intn(k)]
+		sb.WriteByte(c)
+	}
+
+	sb.WriteString("@gmail.com")
+
+	return sb.String()
 }
