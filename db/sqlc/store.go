@@ -50,7 +50,7 @@ type TransferTxResult struct {
 	ToEntry     Entry    `json:"to_entry"`
 }
 
-// performs tranfer of money from one account to other account
+// TransferTX performs tranfer of money from one account to other account
 // it creates transfer record, write entries, and update balances within single transaction
 func (store *Store) TransferTX(ctx context.Context, arg TransferTxParams) (TransferTxResult, error) {
 	var result TransferTxResult
