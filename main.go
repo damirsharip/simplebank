@@ -2,11 +2,13 @@ package main
 
 import (
 	"database/sql"
-	_ "github.com/lib/pq"
 	"log"
+
 	"tutorial.sqlc.dev/app/api"
 	db "tutorial.sqlc.dev/app/db/sqlc"
 	"tutorial.sqlc.dev/app/db/util"
+
+	_ "github.com/lib/pq"
 )
 
 func main() {

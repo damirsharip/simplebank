@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 	"testing"
+
 	"tutorial.sqlc.dev/app/db/util"
 
 	_ "github.com/lib/pq"

@@ -3,11 +3,13 @@ package api
 import (
 	"database/sql"
 	"errors"
-	"github.com/gin-gonic/gin"
-	"github.com/lib/pq"
 	"net/http"
+
 	db "tutorial.sqlc.dev/app/db/sqlc"
 	"tutorial.sqlc.dev/app/token"
+
+	"github.com/gin-gonic/gin"
+	"github.com/lib/pq"
 )
 
 type CreateAccountRequest struct {

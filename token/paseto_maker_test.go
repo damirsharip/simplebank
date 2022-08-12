@@ -1,10 +1,12 @@
 package token
 
 import (
-	"github.com/stretchr/testify/require"
 	"testing"
 	"time"
+
 	"tutorial.sqlc.dev/app/db/util"
+
+	"github.com/stretchr/testify/require"
 )
 
 func TestPasetoMaker(t *testing.T) {

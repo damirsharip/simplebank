@@ -2,10 +2,12 @@ package db
 
 import (
 	"context"
-	"github.com/stretchr/testify/require"
 	"testing"
 	"time"
+
 	"tutorial.sqlc.dev/app/db/util"
+
+	"github.com/stretchr/testify/require"
 )
 
 func createRandomUser(t *testing.T) User {

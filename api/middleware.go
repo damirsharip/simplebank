@@ -3,10 +3,12 @@ package api
 import (
 	"errors"
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"strings"
+
 	"tutorial.sqlc.dev/app/token"
+
+	"github.com/gin-gonic/gin"
 )
 
 const (

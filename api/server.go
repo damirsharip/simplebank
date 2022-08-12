@@ -2,12 +2,14 @@ package api
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
-	"github.com/gin-gonic/gin/binding"
-	"github.com/go-playground/validator/v10"
+
 	db "tutorial.sqlc.dev/app/db/sqlc"
 	"tutorial.sqlc.dev/app/db/util"
 	"tutorial.sqlc.dev/app/token"
+
+	"github.com/gin-gonic/gin"
+	"github.com/gin-gonic/gin/binding"
+	"github.com/go-playground/validator/v10"
 )
 
 type Server struct {

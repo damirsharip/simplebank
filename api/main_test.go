@@ -1,13 +1,15 @@
 package api
 
 import (
-	"github.com/gin-gonic/gin"
-	"github.com/stretchr/testify/require"
 	"os"
 	"testing"
 	"time"
+
 	db "tutorial.sqlc.dev/app/db/sqlc"
 	"tutorial.sqlc.dev/app/db/util"
+
+	"github.com/gin-gonic/gin"
+	"github.com/stretchr/testify/require"
 )
 
 func newTestServer(t *testing.T, store db.Store) *Server {

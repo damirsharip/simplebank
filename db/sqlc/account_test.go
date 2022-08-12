@@ -5,6 +5,7 @@ import (
 	"database/sql"
 	"testing"
 	"time"
+
 	"tutorial.sqlc.dev/app/db/util"
 
 	"github.com/stretchr/testify/require"

@@ -1,8 +1,9 @@
 package api
 
 import (
-	"github.com/go-playground/validator/v10"
 	"tutorial.sqlc.dev/app/db/util"
+
+	"github.com/go-playground/validator/v10"
 )
 
 var validCurrency validator.Func = func(fieldlevel validator.FieldLevel) bool {

@@ -1,11 +1,13 @@
 package token
 
 import (
-	"github.com/golang-jwt/jwt/v4"
-	"github.com/stretchr/testify/require"
 	"testing"
 	"time"
+
 	"tutorial.sqlc.dev/app/db/util"
+
+	"github.com/golang-jwt/jwt/v4"
+	"github.com/stretchr/testify/require"
 )
 
 func TestJWTMaker(t *testing.T) {
