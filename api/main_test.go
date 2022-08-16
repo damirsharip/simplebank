@@ -12,7 +12,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func newTestServer(t *testing.T, store db.Store) *Server {
+func NewTestServer(t *testing.T, store db.Store) *Server {
 	config := util.Config{
 		TokenSymmetricKey:   util.RandomString(32),
 		AccessTokenDuration: time.Minute * 15,
